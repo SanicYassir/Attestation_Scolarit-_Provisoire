@@ -57,7 +57,9 @@ export const StudentForm: React.FC<StudentFormProps> = ({
   const anneeOptions = [
     { value: '1ère année cycle préparatoire intégré', label: '1ère année cycle préparatoire intégré' },
     { value: '2ème année cycle préparatoire intégré', label: '2ème année cycle préparatoire intégré' },
-    { value: '1ère année cycle ingénieur', label: '1ère année cycle ingénieur' }
+    { value: '1ère année cycle ingénieur', label: '1ère année cycle ingénieur' },
+    { value: '2ème année cycle ingénieur', label: '2ème année cycle ingénieur' },
+    { value: '3ème année cycle ingénieur', label: '3ème année cycle ingénieur' }
   ];
 
   return (
