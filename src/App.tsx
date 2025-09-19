@@ -16,7 +16,8 @@ const initialStudentInfo: StudentInfo = {
   sexe: 'Homme',
   diplome: 'Diplôme de cycle préparatoire intégré',
   annee: '1ère année cycle préparatoire intégré',
-  dateNow: ''
+  dateNow: '',
+  apogee:''
 };
 
 function App() {
