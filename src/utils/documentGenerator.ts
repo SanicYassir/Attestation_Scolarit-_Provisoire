@@ -26,7 +26,7 @@ export const generateAndDownloadFilledDoc = async (info: StudentInfo) => {
     Sexe: info.sexe === 'Femme' ? 'inscrite' : 'inscrit',
     Diplome: info.diplome,
     Annee: info.annee,
-    Apogee:info.apogee,
+    Apogee:info.apogee?info.apogee:"",
     DateNow: info.dateNow,
   });
 
