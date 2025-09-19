@@ -44,6 +44,22 @@ export const StudentForm: React.FC<StudentFormProps> = ({
     });
   };
 
+  const handleReset = () => {
+    onChange({
+      nom: '',
+      prenom: '',
+      cin: '',
+      cne: '',
+      dateNaissance: '',
+      sexe: '',
+      adresse: '',
+      apogee: '',
+      diplome: '',
+      annee: '',
+      dateNow: studentInfo.dateNow // keep date auto-generated
+    });
+  };
+
   const sexeOptions = [
     { value: 'Homme', label: 'Homme' },
     { value: 'Femme', label: 'Femme' }
@@ -132,6 +148,13 @@ export const StudentForm: React.FC<StudentFormProps> = ({
           onChange={handleFieldChange}
           required
         />
+
+        <FormField
+          label="Apogée"
+          name="apogee"
+          value={studentInfo.apogee}
+          onChange={handleFieldChange}
+        />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormField
@@ -142,6 +165,7 @@ export const StudentForm: React.FC<StudentFormProps> = ({
             options={diplomeOptions}
             required
           />
+          
           <FormField
             label="Année"
             name="annee"
@@ -152,10 +176,17 @@ export const StudentForm: React.FC<StudentFormProps> = ({
           />
         </div>
 
-        <div className="bg-gray-50 p-4 rounded-lg">
+        <div className="bg-gray-50 p-4 rounded-lg flex items-center justify-between">
           <p className="text-sm text-gray-600">
             <strong>Date du document:</strong> {studentInfo.dateNow}
           </p>
+          <button
+            type="button"
+            onClick={handleReset}
+            className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg shadow"
+          >
+            Réinitialiser
+          </button>
         </div>
       </form>
     </div>
